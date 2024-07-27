@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna portfolio</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 10;
+            background-image: linear-gradient(to right, rgb(148, 175, 174), rgb(131, 169, 171));
+        }
+
+        .main {
+            color: black;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #home {
+            height: 600px;
+            width: 100%;
+            background-color: rgb(222, 227, 232);
+        }
+
+        .pdiv-home {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            /* border: 4px solid black; */
+        }
+
+        .homec1 {
+            height: inherit;
+            width: 60%;
+            align-items: center;
+            justify-content: center;
+            padding-left: 0%;
+            /* border: 2px solid black; */
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+
+        .name1 {
+            font-size: 15px;
+            color: rgb(41, 39, 39);
+        }
+
+        #name {
+            font-weight: bold;
+            /* -webkit-text-stroke: 1px #0a1412; */
+            color: rgb(20, 190, 224);
+            font-size: 30px;
+        }
+
+        #resume {
+            text-decoration: none;
+            border: none;
+            background-color: rgb(110, 135, 151);
+            margin: 20px;
+            height: 40px;
+            width: 100px;
+            margin-left: 5px;
+            border-radius: 5px;
+            font-weight: bolder;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        #resume:hover {
+            background-color: rgb(84, 187, 201);
+        }
+
+        #resume a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .homec2 {
+            height: inherit;
+            width: 40%;
+        }
+
+        .gif {
+            margin-top: 150px;
+            margin-right: 250px;
+        }
+
+        #about {
+            height: 500px;
+            width: 100%;
+            background-color: rgb(199, 209, 218);
+        }
+
+        .pdiv-about {
+            height: inherit;
+            width: 100%;
+            display: flex;
+            /* border: 2px solid black; */
+        }
+
+        .aboutc1 {
+            height: inherit;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid black; */
+        }
+
+        .aboutc2 {
+            height: inherit;
+            width: 60%;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            padding: 80px;
+            padding-right: 50px;
+            text-align: justify;
+        }
+
+        .aboutc2 h1 {
+            font-size: 30px;
+            font-family: Arial Black;
+            margin-bottom: 23px;
+            color: rgb(99, 201, 212);
+            text-align: center;
+        }
+
+        .aboutc2 p {
+            word-spacing: 5px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            text-indent: 20%;
+        }
+
+        .img {
+            /* margin-top: 50px; */
+            padding-left: 7%;
+            height: 350px;
+            width: 370px;
+            overflow: hidden;
+        }
+
+        .tracking-in-expand {
+            -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+
+        @-webkit-keyframes tracking-in-expand {
+            0% {
+                letter-spacing: -0.5em;
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes tracking-in-expand {
+            0% {
+                letter-spacing: -0.5em;
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #skills {
+            height: 600px;
+            width: 100%;
+            background-color: rgb(222, 227, 232);
+            padding-top: 40px;
+        }
+
+        #skills h1 {
+            font-size: 30px;
+            font-family: Arial Black;
+            margin-bottom: 23px;
+            color: rgb(99, 201, 212);
+            text-align: center;
+        }
+
+        .skill-section {
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            width: 100%;
+            margin-top: 0px;
+            padding: 40px;
+            background-color: rgb(222, 227, 232);
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-page-info {
+            margin: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            justify-content: center;
+            padding: 40px;
+            width: 150px;
+            height: 100px;
+            border-radius: 50px;
+            box-shadow: 0 0 12px #afafaf;
+            transition: transform 0.3s ease !important;
+        }
+
+        .skill-section :hover {
+            transform: scale(1.2);
+        }
+
+        #project {
+            height: 600px;
+            background-color: rgb(199, 209, 218);
+        }
+
+        #project h1 {
+            font-size: 30px;
+            font-weight: bolder;
+            margin-bottom: 23px;
+            color: rgb(99, 201, 212);
+            text-align: center;
+        }
+
+        .myprojects-section {
+            width: 90%;
+            height: 400px;
+            /* background-color: grey; */
+            margin-left: 5%;
+        }
+
+        #contact {
+            height: 600px;
+            width: 100%;
+            align-items: center;
+            background-color: #dee3e8;
+    
+        }
+        .p_contact{
+            height: 500px;
+            width: 100%;
+            padding: 30px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #contact h1 {
+            color: rgb(99, 201, 212);
+        }
+
+        .c_contact{
+            border-radius: 20px;
+            padding: 50px;
+            height: 400px;
+            width: 80%;
+            background-color: white;
+            padding-right: 100px;
+            align-items: center;
+
+        }
+
+        #footer-port {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            height: 70px;
+            width: 100%;
+            background-color: rgb(160, 187, 189);
+        }
+
+        #footer-port h4 {
+            line-height: 70px;
+            font-size: 30px;
+            font-weight: bolder;
+            font-variant: small-caps;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand" href="#">
+                <div class="main">Krishna Vijay Kadam</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section id="home" class="sections">
+        <div class="pdiv-home">
+            <div class="homec1">
+                <div class="name1">Hello i'm </div>
+                <div id="name" class="Myname">Krishna Kadam</div>
+                <div class="name2">A</div>
+                <div id="name" class="role">FrontEnd Developer</div>
+                <div><button id="resume"><a href="resume.pdf" target="_blank">RESUME</a></button></div>
+            </div>
+            <div class="homec2">
+                <div class="gif">
+                    <img src="fed.gif" alt="gif" width="460" height="345">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="sections">
+        <div class="pdiv-about">
+            <div class="aboutc1">
+                <div class="img">
+                    <img src="DP.jpg" alt="my photo" width="460" height="345">
+                </div>
+            </div>
+            <div class="aboutc2">
+                <h1 class="tracking-in-expand">About</h1>
+                <p>As a passionate and detail-oriented front-end developer, I specialize in creating dynamic and
+                    responsive web applications. My expertise lies in HTML, CSS, JavaScript, and modern frameworks like
+                    React and Angular. I am adept at translating design wireframes into high-quality code, ensuring
+                    seamless user experiences across various devices and browsers.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="sections">
+        <h1 align="center" class="tracking-in-expand"> Skills</h1>
+        <div class="skill-section">
+            <div class="skill-page-info">
+                <h5 class="skill-name">HTML</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">CSS</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">JavaScript</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">ReactJS</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">SQL</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">GitHub</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">Boostrap</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">C++</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">C</h5>
+            </div>
+            <div class="skill-page-info">
+                <h5 class="skill-name">python</h5>
+            </div>
+        </div>
+    </section>
+    <section id="project" class="sections">
+        <h1 align="center" class="tracking-in-expand">Projects </h1>
+        <div class="myprojects-section">
+
+            <div class="card-deck">
+                <div class="card" data-aos="slide-right">
+                    <img src="fed.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio</h5>
+                        <p class="card-text">Available for freelance/contract work. Contact me at
+                            krishnakadam1628@gmail.com.To Visit my portfolio simply click below </p>
+                        <p class="card-text"><small class="text-muted"><a href="https://kvk8208.github.io/portfolio/"
+                                    target="blank">CLICK
+                                    HERE </a></small></p>
+                    </div>
+                </div>
+                <div class="card" data-aos="slide-down">
+                    <img src="calc.png" width="120px" height="300px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Calculator</h5>
+                        <p class="card-text">A calculator is an electronic device or software used to perform
+                            mathematical operations like addition, subtraction, multiplication, and division. It can
+                            also handle complex functions and solve equations.</p>
+                        <p class="card-text"><small class="text-muted"><a
+                                    href="https://kvk8208.github.io/calculator/" target="blank">CLICK
+                                    HERE </a></small></small></p>
+                    </div>
+                </div>
+                <div class="card" data-aos="slide-left">
+                    <img style="height: 200px; width: 250px; margin-left: 27%;"
+                        src="https://cdn-icons-png.freepik.com/512/3767/3767036.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather App</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-muted"><a
+                                    href="https://kvk8208.github.io/calculator/" target="blank">CLICK
+                                    HERE </a></small></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="sections">
+        <h1 align="center" class="tracking-in-expand">Contact </h1>
+        <div class="p_contact">
+        <div class="c_contact">
+            <h4 align="center">Enquiry</h4>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Phone Number</label>
+                        <input type="tel" class="form-control" id="inputPassword4">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress2">Comment</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Add a comment here">
+                </div>
+
+                <div class="form-group">
+
+                </div>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    <section id="footer-port">
+        <h4 align="center"> Made by Krishna &#9829;</h4>
+    </section>
+</body>
+
+</html>
+
+<!-- 
+                        <pre>
+                            Name: Krishna Vijay Kadam
+                            E-mail: Krishnakadam1628@gmail.com
+                            Phone-no: 8208818281
+                            Address: Neelam Apartmennt, Teen Hatti chowk, Dhankawadi, Pune
+                          </pre>
+                      </div> -->
